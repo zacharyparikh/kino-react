@@ -1,7 +1,9 @@
 {
-  "extends": "@tsconfig/node17",
+  "extends": "@tsconfig/node16",
   "compilerOptions": {
+    "rootDir": ".",
     "outDir": "dist",
+    "sourceMap": true,
     "moduleResolution": "node",
     "noPropertyAccessFromIndexSignature": false
   }

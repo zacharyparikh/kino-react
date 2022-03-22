@@ -1,11 +1,10 @@
 import { queryType } from 'nexus';
-import prisma from '../db';
 
 const Query = queryType({
   definition(t) {
     t.list.field('allUsers', {
       type: 'User',
-      resolve: () => prisma.users.findMany(),
+      resolve: (_source, _args, { prisma }) => prisma.users.findMany(),
     });
   },
 });
